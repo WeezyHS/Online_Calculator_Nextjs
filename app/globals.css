@@ -1,0 +1,112 @@
+@import "tailwindcss"; /*Importa os estilos Tailwind do CSS*/
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+input[type="number"]::-webkit-outer-spin-button, /*Seleciona todos os elementos <input> com o atributo type definido como number. Seleciona os botões de incremento/decremento que aparecem nos campos de entrada do
+tipo número em navegadores baseados em WebKit (Chrome, Safari)*/
+input[type="number"]::-webkit-inner-spin-button
+{
+  -webkit-appearance: none; /*Remove a aparência padrão dos botões de incremento/decremento*/
+  margin: 0; /*Remove a margem dos botões de incremento/decremento*/
+}
+
+input[type="number"]
+{
+  -moz-appearance: textfield; /*Remove a aparência padrão dos botões de incremento/decremento no Firefox*/
+}
+
+@theme inline
+{ /*Define um bloco de tema inline, provavelmente usado por um sistema de temas CSS (não é uma regra CSS)*/
+  --color-background: var(--background); /*Define uma variável CSS personalizada --color-background com o valor da varável --background*/
+  --color-foreground: var(--foreground); /*Define uma variável CSS personalizada --color-foreground com o valor da varável --foreground*/
+  --font-sans: var(--font-geist-sans); /*Define uma variável CSS personalizada --font-sans com o valor da varável --font-geist-sans*/
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark)
+{
+  :root
+  {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body
+{
+  background: var(--background); /*Define a cor de fundo do corpo usando variável --background*/
+  color: var(--foreground); /*Define a cor do texto do corpo usando variável --foreground*/
+  font-family: Arial, Helvetica, sans-serif; /*Define a família de fontes usadas no corpo*/
+  margin: 0; /*Remove a margem padrão do corpo*/
+  padding: 0; /*Remove o preenchimento padrão do corpo*/
+}
+
+h1
+{
+  font-family: "Boldonse", cursive; /*Define a família de fontes usadas nos títulos*/
+}
+
+.container
+{
+  width: 100%; /*Define a largura do contêiner como 100% da largura disponível*/
+  height: 100%;
+}
+
+.Title
+{
+  text-align: center; /*Centraliza o texto dentro do elemento*/
+  margin-bottom: 50px; /*Define uma margem inferior (espaço) de 50 pixels*/
+  margin-top: 30px; /*Define uma margem superior (espaço) de 30 pixels, para o título manter uma distância do limite da página*/
+}
+
+.result
+{
+  margin-top: 70px;
+}
+
+.input_group
+{
+  display: flex; /*Define o contêiner como um contêiner Flexbox*/
+  align-items: flex-start; /*Alinha os itens flexíveis ao início da linha (topo)*/
+  margin-bottom: 20px;
+}
+
+.input_group label /*Seleciona elementos <label> dentro de elementos com a classe input_group*/
+{
+  margin-right: 10px; /*Define uma margem direita de 10 pixels*/
+  flex-shrink: 0; /*Impede que a label encolha*/
+  width: auto; /*Permite que a largura da label seja definida pelo conteúdo*/
+  text-align: left; /*Alinha o texto da label à esquerda*/
+}
+
+.button_group
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calculate_button, .sum_button, .sub_button, .delete_button
+{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.calculate_button:hover, .sum_button:hover, .sub_button:hover, .delete_button:hover
+{
+  background-color: #0056b3;
+}
+
+.active_operation
+{ /*Define estilos visuais para um botão ativo. Esse estilo será ativado assim que o botão for clicado, para identificar um botão selecionado*/
+  background-color: lightcoral;
+  border: 2px solid blue;
+}
