@@ -17,7 +17,7 @@ export default function Home()
   const handleCalculate = () =>
     {
       if (!operation)
-      { //Se um dos botões de operação não for clicado, exibe um alerta e retorn
+      { //Se um dos botões de operação não for clicado, exibe um alerta e retorna
         setResult(null);
         alert("Por favor, selecione um modo de operação primeiro!");
         return;
