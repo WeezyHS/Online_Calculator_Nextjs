@@ -59,7 +59,7 @@ h1
 {
   text-align: center; /*Centraliza o texto dentro do elemento*/
   margin-bottom: 50px; /*Define uma margem inferior (espaço) de 50 pixels*/
-  margin-top: 30px; /*Define uma margem superior (espaço) de 30 pixels, para o título manter uma distância do limite da página*/
+  margin-top: 30px; /*Define uma margem na parte de cima (espaço) de 30 pixels, para o título manter uma distância do limite da página*/
 }
 
 .result
